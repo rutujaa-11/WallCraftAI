@@ -15,7 +15,7 @@ SECRET_KEY = 'django-insecure-idg+c3%amqk=74%4+-#8e^*d6cs^$yb2)66$sludjh*$8lcedp
 
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["wallcraftai.onrender.com", "localhost", "127.0.0.1"]
 
 
 # Application definition
