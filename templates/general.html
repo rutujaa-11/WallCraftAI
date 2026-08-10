@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>General AI - WALLCRAFT AI</title>
+
+<style>
+
+body{
+    font-family:Arial;
+    background:#111;
+    color:white;
+    text-align:center;
+    padding:50px;
+}
+
+.box{
+    background:#222;
+    padding:40px;
+    border-radius:15px;
+    max-width:700px;
+    margin:auto;
+}
+
+textarea{
+    width:90%;
+    height:120px;
+    padding:15px;
+    border-radius:10px;
+    font-size:16px;
+    resize:none;
+}
+
+button{
+    margin-top:20px;
+    padding:12px 30px;
+    border:none;
+    border-radius:25px;
+    background:#2ed573;
+    color:white;
+    font-size:18px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#20bf6b;
+}
+
+img{
+    margin-top:30px;
+    width:512px;
+    max-width:90%;
+    border-radius:15px;
+}
+
+.error{
+    color:red;
+    margin-top:20px;
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+    <body>
+
+{% include 'header.html' %}
+
+<!-- existing general code -->
+
+</body>
+
+
+<div class="box">
+
+
+<h1>✨ General AI Generator</h1>
+
+<p>Create any type of AI wallpaper</p>
+
+
+<form method="POST">
+
+{% csrf_token %}
+
+
+<textarea 
+name="prompt"
+placeholder="Describe your wallpaper idea..."
+required></textarea>
+
+
+<br>
+
+
+<button type="submit">
+Generate AI Wallpaper
+</button>
+
+
+</form>
+
+
+
+{% if error %}
+
+<div class="error">
+
+<h3>{{ error }}</h3>
+
+</div>
+
+{% endif %}
+
+
+
+{% if image %}
+
+<h2>Generated Wallpaper</h2>
+
+<img src="{{ image }}" alt="AI Wallpaper">
+
+{% endif %}
+
+
+
+</div>
+
+
+</body>
+
+</html>

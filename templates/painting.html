@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Painting AI - WALLCRAFT AI</title>
+
+<style>
+
+body{
+    font-family: Arial, sans-serif;
+    background:#111;
+    color:white;
+    text-align:center;
+    padding:50px;
+}
+
+.box{
+    background:#222;
+    padding:40px;
+    border-radius:15px;
+    max-width:700px;
+    margin:auto;
+}
+
+textarea{
+    width:90%;
+    height:120px;
+    padding:15px;
+    border-radius:10px;
+    font-size:16px;
+    resize:none;
+}
+
+button{
+    margin-top:20px;
+    padding:12px 30px;
+    border:none;
+    border-radius:25px;
+    background:#1e90ff;
+    color:white;
+    font-size:18px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#0066cc;
+}
+
+img{
+    margin-top:30px;
+    width:512px;
+    max-width:90%;
+    border-radius:15px;
+}
+
+.error{
+    color:red;
+    margin-top:20px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+{% include 'header.html' %}
+
+<div class="box">
+
+    <h1>🖌️ Painting AI Generator</h1>
+
+    <p>Create beautiful AI painting wallpapers</p>
+
+    <form method="POST" action="{% url 'painting' %}">
+
+        {% csrf_token %}
+
+        <textarea 
+            name="prompt"
+            placeholder="Describe your painting wallpaper..."
+            required
+        ></textarea>
+
+        <br>
+
+        <button type="submit">
+            Generate AI Painting
+        </button>
+
+    </form>
+
+    {% if error %}
+
+        <div class="error">
+            <h3>{{ error }}</h3>
+        </div>
+
+    {% endif %}
+
+    {% if image %}
+
+        <h2>Generated Painting</h2>
+
+        <img src="{{ image }}" alt="AI Painting">
+
+    {% endif %}
+
+</div>
+
+</body>
+
+</html>

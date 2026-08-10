@@ -1,0 +1,142 @@
+<header>
+    <div class="logo">
+        <a href="/" style="text-decoration: none; color: white;">
+            WALLCRAFT AI
+        </a>
+    </div>
+
+    <nav>
+        <a href="/mural/">Mural</a>
+        <a href="/painting/">Painting</a>
+        <a href="/general/">General</a>
+     
+    </nav>
+</header>
+
+<!-- Inside your main card component, structure your headings like this: -->
+<!-- 
+<div class="box">
+    <h1>Mural AI Generator</h1>
+    <p>Create amazing AI mural wallpapers using AI</p>
+    
+    <textarea placeholder="Describe your wallpaper idea..."></textarea>
+    <button>Generate AI Wallpaper</button>
+</div> 
+-->
+
+<style>
+/* Reset browser defaults to remove unwanted gaps around the screen */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #111;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+/* ===== BIGGER HEADER NAVBAR ===== */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #000; 
+    height: 85px;      
+    padding: 0px 45px; 
+    width: 100%;
+    position: fixed;   
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 24px;   
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 30px; 
+    font-size: 18px;   
+}
+
+nav a:hover {
+    color: #ff6b6b;
+}
+
+/* ===== SMALLER & COMPACT MAIN BOX ===== */
+.box {
+    background: #1a1a1a;          
+    padding: 40px 35px;           
+    border-radius: 16px;          
+    max-width: 750px;            
+    width: 90%;                   
+    margin: 120px auto 40px auto; 
+    text-align: center;
+}
+
+/* ===== GLOBAL HEADING GAP ADJUSTMENT ===== */
+h1 {
+    margin-bottom: 25px !important; /* Added the absolute vertical spacing gap right after the 1st sentence title */
+}
+
+/* ===== TITLES AND TEXT GAP SYSTEM ===== */
+.main-title {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 25px; /* Keeps class-based headings aligned with the clean vertical gap */
+}
+
+.sub-title {
+    font-size: 16px;
+    color: #cccccc;      /* Soft silver text color for secondary text */
+}
+
+/* ===== TEXTAREA SETUP ===== */
+textarea {
+    width: 100%;
+    height: 140px;                
+    padding: 15px;
+    border-radius: 12px;
+    font-size: 16px;
+    background: #ffffff;
+    color: #333333;
+    border: none;
+    resize: none;
+    margin-top: 25px; /* Clean gap above the input box */
+    margin-bottom: 25px;
+}
+
+textarea:focus {
+    outline: none;
+}
+
+/* ===== GREEN BUTTON SYSTEM ===== */
+button {
+    padding: 14px 45px;
+    border: none;
+    border-radius: 30px;          
+    background: #1cc88a;          
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s ease-in-out;
+}
+
+button:hover {
+    background: #17b078;          
+}
+</style>
