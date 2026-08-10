@@ -16,7 +16,7 @@ header {
     justify-content: space-between;
     align-items: center;
     background: #000;
-    padding: 8px 30px; /* हेडरची वरची आणि खालची स्पेस कमी केली */
+    padding: 8px 30px; 
     margin: 0;
     position: sticky;
     top: 0;
@@ -27,7 +27,7 @@ header {
 .logo a {
     color: white;
     text-decoration: none;
-    font-size: 22px; /* लोगोचा आकार लहान केला */
+    font-size: 22px; 
     font-weight: bold;
 }
 
@@ -35,8 +35,8 @@ header {
 nav a {
     color: white;
     text-decoration: none;
-    margin-left: 20px; /* लिंक्समधील अंतर कमी केले */
-    font-size: 15px; /* लिंक्सचा फॉन्ट लहान केला */
+    margin-left: 20px; 
+    font-size: 15px; 
 }
 
 
@@ -125,7 +125,7 @@ img {
     header {
         flex-direction: column;
         gap: 10px;
-        padding: 10px 15px; /* मोबाईल स्क्रीनसाठी पॅडिंग सेट केले */
+        padding: 10px 15px; 
     }
 
     nav a {
